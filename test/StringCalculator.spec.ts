@@ -46,4 +46,8 @@ describe('Add should', () => {
     test('throws exception when a number is negative', () => {
         expect(() => add('-1')).toThrow();        
     })
+
+    test('throw exception with the negative numbers', () => {
+        expect(() => add('-1,-2')).toThrow('Negatives not allowed. -1, -2');
+    })
 })

@@ -10,9 +10,13 @@ export function add(values: string) {
         .map((n) => {
             return Number.parseInt(n);
         });
-    if (numbers.some((n) => n < 0)) throw new Error("Negatives not allowed.");
+    
+    if (numbers.some((n) => n < 0)){ 
+        let negatives = numbers.filter((number) => number < 0).join(", ");
+        throw new Error("Negatives not allowed. " + negatives);
+    }
     return numbers        
         .reduce((a, n) => {
             return a + n;
-        });    
+    });    
 }
