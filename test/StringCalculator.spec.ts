@@ -42,4 +42,8 @@ describe('Add should', () => {
     test('returns 3 when the string "//*\n1*2"', () => {
         expect(add('//*\n1*2')).toBe(3);
     })
+
+    test('throws exception when a number is negative', () => {
+        expect(() => add('-1')).toThrow();        
+    })
 })
