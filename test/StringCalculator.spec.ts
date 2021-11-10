@@ -31,6 +31,10 @@ describe('Add should', () => {
         expect(add('1\n2')).toBe(3);
     })
 
+    test('returns 3 when the string is "1\n2"', () => {
+        expect(add('1\n2\n3')).toBe(6);
+    })
+
     test('returns 7 when string is "2,2\n3"', () => {
         expect(add('2,2\n3')).toBe(7);
     })
@@ -49,5 +53,13 @@ describe('Add should', () => {
 
     test('throw exception with the negative numbers', () => {
         expect(() => add('-1,-2')).toThrow('Negatives not allowed. -1, -2');
+    })
+
+    test('returns 2 when the string is "1001,1,1"', () => {
+        expect(add('1001,1,1')).toBe(2);
+    })
+
+    test('returns 6 when the string is "//[***]\n1***2***3"', () => {
+        expect(add('//[***]\n1***2***3')).toBe(6);
     })
 })
