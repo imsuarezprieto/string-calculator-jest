@@ -34,4 +34,12 @@ describe('Add should', () => {
     test('returns 7 when string is "2,2\n3"', () => {
         expect(add('2,2\n3')).toBe(7);
     })
+
+    test('returns 3 when the string is "//;\n1;2"', () => {
+        expect(add('//;\n1;2')).toBe(3);
+    })
+
+    test('returns 3 when the string "//*\n1*2"', () => {
+        expect(add('//*\n1*2')).toBe(3);
+    })
 })
