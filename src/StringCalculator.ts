@@ -1,4 +1,7 @@
 export function add(values: string) {
-    if(values === '1') return 1;
-    return 0;
+    if(values !== ''){
+        const number = Number.parseInt(values);
+        return number;
+    }
+     return 0;
 }
