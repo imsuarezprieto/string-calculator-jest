@@ -1,6 +1,7 @@
 export function add(values: string) {    
     if (values === '') return 0;    
     return values
+        .replace('\n', ',')
         .split(',')
         .map((n) => {
             return Number.parseInt(n);
